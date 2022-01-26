@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.2](https://github.com/napi-rs/napi-rs/compare/@napi-rs/cli@2.4.1...@napi-rs/cli@2.4.2) (2022-01-19)
+
+### Bug Fixes
+
+- **cli:** js binding template ([25f6754](https://github.com/napi-rs/napi-rs/commit/25f6754a71dfa4736c75eb91bf9f2562543f5d08))
+
+## [2.4.1](https://github.com/napi-rs/napi-rs/compare/@napi-rs/cli@2.4.0...@napi-rs/cli@2.4.1) (2022-01-18)
+
+### Bug Fixes
+
+- **cli:** missing shebang in zig-cross sh file ([63a16d0](https://github.com/napi-rs/napi-rs/commit/63a16d0a27f09766a6dd557691d598758a147882))
+- **cli:** properly handle RUSTFLAGS env var ([d84cbe8](https://github.com/napi-rs/napi-rs/commit/d84cbe88bdcaadbc0b57c6b49b9d84e22020cf34))
+- **cli:** swap -lgcc_s with -lunwind ([1799aa9](https://github.com/napi-rs/napi-rs/commit/1799aa94e3132c425cfc47413b7c254d7f8f711e))
+
 # [2.4.0](https://github.com/napi-rs/napi-rs/compare/@napi-rs/cli@2.3.1...@napi-rs/cli@2.4.0) (2022-01-13)
 
 ### Bug Fixes

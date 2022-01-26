@@ -78,6 +78,7 @@ import {
   receiveMutClassOrNumber,
   getStrFromObject,
   testSerdeRoundtrip,
+  returnJsFunction,
 } from '../'
 
 test('export const', (t) => {
@@ -191,6 +192,16 @@ test('callback', (t) => {
   readFile((err, content) => {
     t.is(err, undefined)
     t.is(content, 'hello world')
+  })
+})
+
+test('return function', (t) => {
+  return new Promise<void>((resolve) => {
+    returnJsFunction()((err: Error | undefined, content: string) => {
+      t.is(err, undefined)
+      t.is(content, 'hello world')
+      resolve()
+    })
   })
 })
 
@@ -338,7 +349,7 @@ test('async', async (t) => {
   await t.notThrowsAsync(bufPromise)
   const buf = await bufPromise
   const { name } = JSON.parse(buf.toString())
-  t.is(name, 'napi-examples')
+  t.is(name, 'examples')
 
   await t.throwsAsync(() => readFileAsync('some_nonexist_path.file'))
 })
